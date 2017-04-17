@@ -22,21 +22,21 @@ Off-heap memory, data structures, operations
 JVM allows to allocate and use memory outside of java heap. Such off-heap memory may be allocated/used/deallocated
 without additional load on garbage collector.
 
-###Off-heap memory management
+### Off-heap memory management
 
 Off-heap memory manager implemented as a thin wrapper over `sun.misc.Unsafe`. Other data structures implemented on top of it.
 
 See `com.alexkasko.unsafe.offheap` [package description](http://alexkasko.github.io/unsafe-tools/com/alexkasko/unsafe/offheap/package-summary.html)
 for details.
 
-###Off-heap collections of longs
+### Off-heap collections of longs
 
 Maximum array length in Java is bounded by `Integer.MAX_VALUE`. This library provides long-sized fixed and growing arrays of longs.
 
 See `com.alexkasko.unsafe.offheaplong` [package description](http://alexkasko.github.io/unsafe-tools/com/alexkasko/unsafe/offheaplong/package-summary.html)
 for details.
 
-###Off-heap collections of structs (memory areas)
+### Off-heap collections of structs (memory areas)
 
 Equal-sized memory areas may be stored in off-heap memory contiguously as collections. Such memory areas also may be used
 like C structs (without compiler checks, though). Sorting and searching of these collections may be done using `long` or `int`
@@ -46,7 +46,7 @@ like C structs (without compiler checks, though). Sorting and searching of these
 See `com.alexkasko.unsafe.offheapstruct` [package description](http://alexkasko.github.io/unsafe-tools/com/alexkasko/unsafe/offheapstruct/package-summary.html)
 for details.
 
-###Operations
+### Operations
 
 The following operations are implemented for all off-heap data structures:
 
